@@ -9,7 +9,6 @@ async function createAUser(userData:CreateUserParams){
 
     const foundedUser = await userRepository.findEmail(userData.email);
     if(foundedUser){
-        console.log(foundedUser)
         throw duplicatedEmailError();
     }
     
