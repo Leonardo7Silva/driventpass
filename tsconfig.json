@@ -3,6 +3,7 @@
       "target": "es2020",
       "module": "CommonJS",
       "outDir": "dist",
+      "moduleResolution": "node" ,
       "noImplicitAny": true,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,

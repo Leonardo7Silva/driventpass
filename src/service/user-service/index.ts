@@ -1,7 +1,7 @@
 var bcrypt = require('bcrypt');
 import userRepository from "@/repositories/user-repository";
 import { User } from "@prisma/client";
-import { duplicatedEmailError } from "@/errors";
+import { duplicatedEmailError } from "@/errors/invalid-email-error";
 
 export type CreateUserParams = Pick<User, "email"|"password">
 
