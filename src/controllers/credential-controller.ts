@@ -16,7 +16,7 @@ export async function postCredential(req:AuthenticatedRequest, res:Response){
             password,
         }, userId);
 
-        return res.status(httpStatus.CREATED).send("Credential created!")
+        return res.status(httpStatus.CREATED).send("CREDENTIAL CREATED!")
 
     }catch(error){
         res.status(httpStatus.NOT_FOUND).send(error)
@@ -38,9 +38,6 @@ export async function getAllCredentials(req: AuthenticatedRequest, res:Response)
 export async function getOneCredential(req: AuthenticatedRequest, res:Response){
     const {userId}= req;
     const {credentialId} = req.params;
-    if(!credentialId){
-        return res.status(httpStatus.BAD_REQUEST).send("The params is invalid")
-    }
 
     const credentialNumber = Number(credentialId)
     if(isNaN(credentialNumber)){
@@ -69,9 +66,6 @@ export async function getOneCredential(req: AuthenticatedRequest, res:Response){
 export async function deleteOneCredential(req: AuthenticatedRequest, res:Response){
     const {userId}= req;
     const {credentialId} = req.params;
-    if(!credentialId){
-        return res.status(httpStatus.BAD_REQUEST).send("The params is invalid")
-    }
 
     const credentialNumber = Number(credentialId)
     if(isNaN(credentialNumber)){

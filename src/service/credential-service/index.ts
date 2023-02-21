@@ -33,7 +33,7 @@ async function createCredential(params:CrendentialParams, userId:number){
 
 async function getCredentials(userId:number){
     const credentials = await credentialRepository.findCredentials(userId);
-    if(!credentials){
+    if(credentials.length === 0){
         throw notFoundError();
     }
 

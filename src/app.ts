@@ -1,7 +1,7 @@
 import express, {Express} from "express";
 import cors from 'cors';
 import { connectDb } from "./config";
-import { userRouter, authRouter, credentialRouter } from "./routes";
+import { userRouter, authRouter, credentialRouter, networkRouter} from "./routes";
 
 const app = express();
 
@@ -12,6 +12,7 @@ app
     .use("/user", userRouter)
     .use("/auth", authRouter)
     .use("/credential", credentialRouter)
+    .use("/network", networkRouter)
 
 
 
