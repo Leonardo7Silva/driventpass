@@ -1,7 +1,7 @@
 import express, {Express} from "express";
 import cors from 'cors';
 import { connectDb } from "./config";
-import { userRouter, authRouter } from "./routes";
+import { userRouter, authRouter, credentialRouter } from "./routes";
 
 const app = express();
 
@@ -11,6 +11,8 @@ app
     .get("/health", (req, res)=>{res.send("OK!")})
     .use("/user", userRouter)
     .use("/auth", authRouter)
+    .use("/credential", credentialRouter)
+
 
 
 
