@@ -1,6 +1,8 @@
 import express, {Express} from "express";
 import cors from 'cors';
-import { connectDb, disconnectDB} from "./config";
+import { connectDb, disconnectDB, loadEnv} from "./config";
+
+loadEnv();
 import { userRouter, authRouter, credentialRouter, networkRouter} from "./routes";
 
 const app = express();

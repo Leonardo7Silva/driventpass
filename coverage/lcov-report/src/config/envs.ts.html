@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/middlewares/validation-middleware.ts</title>
+    <title>Code coverage report for src/config/envs.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/middlewares</a> validation-middleware.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/config</a> envs.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">91.66% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/12</span>
+                <span class='fraction'>7/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">25% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>1/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90.9% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/11</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -89,64 +89,58 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">19x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">19x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { invalidDataError } from "@/errors/invalid-data-error";
-import { NextFunction, Request, Response } from "express";
-import httpStatus from "http-status";
-import { ObjectSchema } from "joi";
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// import dotenv from 'dotenv';
 &nbsp;
-export function validateBody&lt;T&gt;(schema: ObjectSchema&lt;T&gt;): ValidationMiddleware {
-  return validate(schema, "body");
+// export function loadEnvs(){
+&nbsp;
+//     let path = ".env"
+//     if(process.env.NODE_ENV === "test"){
+//         path = ".env.test"
+//     }
+//     dotenv.config({path})
+// }
+&nbsp;
+import dotenv from "dotenv";
+import dotenvExpand from "dotenv-expand";
+&nbsp;
+export function loadEnv() {
+  const path =
+    process.env.NODE_ENV === "test"
+      ? ".env.test"
+      : <span class="branch-1 cbranch-no" title="branch not covered" >process.env.NODE_ENV === "development"</span>
+        ? ".env.development"
+        : ".env";
+&nbsp;
+  const currentEnvs = dotenv.config({ path: path });
+  dotenvExpand.expand(currentEnvs);
+  console.log(process.env.DATABASE_URL)
 }
-&nbsp;
-export function <span class="fstat-no" title="function not covered" >validateParams&lt;</span>T&gt;(schema: ObjectSchema&lt;T&gt;): ValidationMiddleware {
-<span class="cstat-no" title="statement not covered" >  return validate(schema, "params");</span>
-}
-&nbsp;
-function validate(schema: ObjectSchema, type: "body" | "params") {
-  return (req: Request, res: Response, next: NextFunction) =&gt; {
-    const { error } = schema.validate(req[type], {
-      abortEarly: false,
-    });
-&nbsp;
-    if (!error) {
-      next();
-    } else {
-      res.status(httpStatus.BAD_REQUEST).send(invalidDataError(error.details.map((d) =&gt; d.message)));
-    }
-  };
-}
-&nbsp;
-type ValidationMiddleware = (req: Request, res: Response, next: NextFunction)=&gt; void;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

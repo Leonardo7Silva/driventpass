@@ -4,7 +4,12 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "NODE_ENV=test jest --passWithNoTests --runInBand --coverage",
+    "test": "NODE_ENV=test jest --passWithNoTests --runInBand --coverage ",
+    "test2": "dotenv -e .env.test jest -- --runInBand --coverage --passWithNoTests",
+    "test:migration:run": "npm run test:load-envs prisma migrate deploy",
+    "test:migration:generate": "npm run test:load-envs prisma migrate dev",
+    "test:watch": "jest --watch --passWithNoTests --runInBand",
+    "test:load-envs": "dotenv -e .env.test",
     "leo": "nodemon src/app.ts",
     "dev": " nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register ./src/server.ts' -e ts"
   },
