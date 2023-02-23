@@ -14,7 +14,6 @@ export async function authenticateToken(req: AuthenticatedRequest, res: Response
         const { userId } = jwt.verify(token, process.env.JWT_SECRET) as JWTPayload;
     
         req.userId = userId;
-        //TODO mudar aqui
         return next();
     }catch(err){
         return unauthorizedResponse(res);

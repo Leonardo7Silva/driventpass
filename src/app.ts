@@ -1,6 +1,6 @@
 import express, {Express} from "express";
 import cors from 'cors';
-import { connectDb } from "./config";
+import { connectDb, disconnectDB} from "./config";
 import { userRouter, authRouter, credentialRouter, networkRouter} from "./routes";
 
 const app = express();
@@ -21,5 +21,14 @@ app.listen(4000, ()=>{
     connectDb();
     console.log("It's alive...")
 });
+
+export function init(): Promise<Express> {
+    connectDb();
+    return Promise.resolve(app);
+  }
+
+export async function close(): Promise<void> {
+    await disconnectDB();
+  }
 
 export default app;
