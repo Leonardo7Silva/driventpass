@@ -15,13 +15,6 @@ app
     .use("/network", networkRouter)
 
 
-
-
-app.listen(4000, ()=>{
-    connectDb();
-    console.log("It's alive...")
-});
-
 export function init(): Promise<Express> {
     connectDb();
     return Promise.resolve(app);

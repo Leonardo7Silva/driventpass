@@ -1,10 +1,10 @@
-import { prisma } from "@/config";
 import httpStatus from "http-status";
 import supertest from "supertest";
 import app from "@/app"
 import { close, init} from "@/app";
 import { createUser } from "../factory";
-import {faker } from "@faker-js/faker"
+import {faker } from "@faker-js/faker";
+import { cleanDB } from "../helpers";
 
 const api = supertest(app);
 
@@ -14,18 +14,12 @@ beforeAll(async ()=>{
 
 afterAll(async ()=>{
     await cleanDB();
-    await close();
 })
  
 beforeEach(async ()=>{
     await cleanDB()
 });
 
-async function cleanDB() {
-    await prisma.credential.deleteMany({})
-    await prisma.network.deleteMany({})
-    await prisma.user.deleteMany({})
-}
 
 
 describe("POST: /users", ()=>{

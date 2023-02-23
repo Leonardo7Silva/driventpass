@@ -19,7 +19,7 @@ export async function postCredential(req:AuthenticatedRequest, res:Response){
         return res.status(httpStatus.CREATED).send("CREDENTIAL CREATED!")
 
     }catch(error){
-        res.status(httpStatus.NOT_FOUND).send(error)
+        res.status(httpStatus.CONFLICT).send(error)
     }
 }
 
@@ -58,8 +58,6 @@ export async function getOneCredential(req: AuthenticatedRequest, res:Response){
             return res.status(httpStatus.FORBIDDEN).send(error)
         }
 
-        return res.send("Deu ruim!")
-
     }
 }
 
@@ -84,9 +82,7 @@ export async function deleteOneCredential(req: AuthenticatedRequest, res:Respons
 
         if(error.name === "UnauthorizedError"){
             return res.status(httpStatus.FORBIDDEN).send(error)
-        }
-
-        return res.send("Deu ruim!")
+        };
 
     }
 }

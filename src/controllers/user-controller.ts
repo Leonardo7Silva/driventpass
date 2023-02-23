@@ -14,10 +14,7 @@ export async function postUser(req:Request, res:Response){
             email: user.email
         })
     }catch(error){
-        if (error.name === "DuplicatedEmailError") {
-            return res.status(httpStatus.CONFLICT).send(error);
-          }
-        res.status(httpStatus.OK).send("deu ruim!")
+        return res.status(httpStatus.CONFLICT).send(error);
     }
 
 }
