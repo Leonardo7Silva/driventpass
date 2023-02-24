@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677181548633" clover="3.2.0">
-  <project timestamp="1677181548633" name="All files">
-    <metrics statements="387" coveredstatements="382" conditionals="41" coveredconditionals="36" methods="60" coveredmethods="58" elements="488" coveredelements="476" complexity="0" loc="387" ncloc="387" packages="16" files="41" classes="41"/>
+<coverage generated="1677259122723" clover="3.2.0">
+  <project timestamp="1677259122723" name="All files">
+    <metrics statements="386" coveredstatements="381" conditionals="41" coveredconditionals="36" methods="60" coveredmethods="58" elements="487" coveredelements="475" complexity="0" loc="386" ncloc="386" packages="16" files="41" classes="41"/>
     <package name="src">
       <metrics statements="14" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="app.ts" path="/home/leonardo/t8/recuperacao/projeto-drivenpass/src/app.ts">
@@ -23,7 +23,7 @@
       </file>
     </package>
     <package name="src.config">
-      <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="1" methods="3" coveredmethods="3"/>
       <file name="database.ts" path="/home/leonardo/t8/recuperacao/projeto-drivenpass/src/config/database.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="3" type="stmt"/>
@@ -33,14 +33,13 @@
         <line num="10" count="2" type="stmt"/>
       </file>
       <file name="envs.ts" path="/home/leonardo/t8/recuperacao/projeto-drivenpass/src/config/envs.ts">
-        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="12" count="3" type="stmt"/>
         <line num="13" count="3" type="stmt"/>
         <line num="15" count="3" type="stmt"/>
         <line num="17" count="6" type="cond" truecount="1" falsecount="1"/>
         <line num="23" count="6" type="stmt"/>
         <line num="24" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/leonardo/t8/recuperacao/projeto-drivenpass/src/config/index.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
