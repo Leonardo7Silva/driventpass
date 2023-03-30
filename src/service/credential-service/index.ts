@@ -1,8 +1,8 @@
-import credentialRepository from "@/repositories/credential-repository";
-import { CrendentialParams } from "@/repositories/credential-repository";
-import { duplicatedTitleError } from "@/errors/duplicate-title-error";
-import { notFoundError } from "@/errors/not-Found-error";
-import { unauthorizedCredentialError } from "@/errors/forbbiden-credential-error";
+import credentialRepository from "../../repositories/credential-repository";
+import { CrendentialParams } from "../../repositories/credential-repository";
+import { duplicatedTitleError } from "../../errors/duplicate-title-error";
+import { notFoundError } from "../../errors/not-Found-error";
+import { unauthorizedCredentialError } from "../../errors/forbbiden-credential-error";
 
 
 async function createCredential(params:CrendentialParams, userId:number){

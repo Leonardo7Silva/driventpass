@@ -1,4 +1,4 @@
-import { prisma } from "@/config";
+import { prisma } from "../../config";
 import { Network } from "@prisma/client";
 
 async function createANetwork(params:CreateNetworkParams, userId:number){

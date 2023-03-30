@@ -1,4 +1,4 @@
-import { prisma } from "@/config";
+import { prisma } from "../../config";
 import { Credential } from "@prisma/client";
 
 async function createACredential(params: CrendentialParams, userId: number){

@@ -1,5 +1,5 @@
 import Joi from "joi";
-import { CrendentialParams } from "@/repositories/credential-repository";
+import { CrendentialParams } from "../repositories/credential-repository";
 
 export const credentialSchema = Joi.object<CrendentialParams>({
     title: Joi.string().min(3).required(),

@@ -1,4 +1,4 @@
-import authenticationService, { SignInParams } from "@/service/auth-service/index";
+import authenticationService, { SignInParams } from "../service/auth-service/index";
 import { Request, Response } from "express";
 import httpStatus from "http-status";
 export async function singInPost(req: Request, res: Response) {

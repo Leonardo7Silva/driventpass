@@ -1,4 +1,4 @@
-import { prisma } from "@/config";
+import { prisma } from "../../src/config"
 import {faker } from "@faker-js/faker"
 import { User } from "@prisma/client";
 

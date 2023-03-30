@@ -1,7 +1,7 @@
 import httpStatus from "http-status";
-import { AuthenticatedRequest } from "@/middlewares";
+import { AuthenticatedRequest } from "../middlewares";
 import { Response } from "express";
-import networkService from "@/service/network-service";
+import networkService from "../service/network-service";
 
 export async function postNetwork(req:AuthenticatedRequest, res:Response){
 

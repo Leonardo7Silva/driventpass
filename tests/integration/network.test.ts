@@ -1,7 +1,7 @@
 import httpStatus from "http-status";
 import supertest from "supertest";
-import app from "@/app"
-import { close, init} from "@/app";
+import app from "../../src/app"
+import { close, init} from "../../src/app";
 import { createUser, createNetworkWithUserIdAndPassword } from "../factory";
 import {faker } from "@faker-js/faker"
 import { generateValidToken, cleanDB } from "../helpers";

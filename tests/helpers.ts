@@ -1,7 +1,7 @@
 import { createUser } from "./factory";
 import * as jwt from "jsonwebtoken";
 import { User } from "@prisma/client";
-import { prisma } from "@/config";
+import { prisma } from "../src/config";
 
 export async function generateValidToken(user?: User) {
     const incomingUser = user || (await createUser());

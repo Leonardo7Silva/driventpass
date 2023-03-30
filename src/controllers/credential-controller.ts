@@ -1,7 +1,7 @@
 import httpStatus from "http-status";
-import { AuthenticatedRequest } from "@/middlewares";
+import { AuthenticatedRequest } from "../middlewares";
 import { Response } from "express";
-import credentialService from "@/service/credential-service";
+import credentialService from "../service/credential-service";
 
 
 export async function postCredential(req:AuthenticatedRequest, res:Response){

@@ -1,7 +1,7 @@
-import networkRepository from "@/repositories/network-repository";
-import { CreateNetworkParams } from "@/repositories/network-repository";
-import { notFoundError } from "@/errors/not-Found-error";
-import { unauthorizedNetworkError } from "@/errors/forbbiden-network-error";
+import networkRepository from "../../repositories/network-repository";
+import { CreateNetworkParams } from "../../repositories/network-repository";
+import { notFoundError } from "../../errors/not-Found-error";
+import { unauthorizedNetworkError } from "../../errors/forbbiden-network-error";
 
 async function createNetwork(params: CreateNetworkParams, userId:number){
 
